@@ -1,4 +1,4 @@
-# Introduction: 
+# Introduction:   
 A genetic algorithm is a problem-solving technique inspired by the principles of natural evolution. It works by simulating the process of natural selection and genetic inheritance to find optimal or near-optimal solutions to complex problems. The algorithm starts with a population of potential solutions, each represented as a "chromosome" encoding specific traits. 
 This documentation explains how a genetic algorithm is used to find solutions to the equation 2x^x + 5x - 3 = 0. The process mimics biological evolution to search for optimal solutions.
 
@@ -12,30 +12,35 @@ To run this project locally,follow these steps:
 1. **Clone the repository:**
 
    ```sh
-   git clone
+   git clone https://github.com/kafSaugat7/Genetic_Algorithm
+   cd Genetic_Algorithm
 
-2. **Create a virtual environment (optional but recommended):**
- Creating a virtual environment is recommended to keep project dependencies isolated.
-'''sh
-python -m
-
-3. **Install Jupyter Notebook and dependencies:**
+2. **Install Jupyter Notebook and dependencies:**
  Install Jupyter Notebook and other dependencies using pip.
+```
+pip install jupyter
+```
 
-4.**Start Jupyter Notebook:**
+3.**Start Jupyter Notebook:**
 Launch Jupyter Notebook to run the genetic algorithm notebook.
+```
+jupyter notebook
+```
 
-5.**Open the notebook:**
-Navigate to the genetic_algorithm.ipynb file in your Jupyter Notebook interface and open it to execute the genetic algorithm code.
+4.**Open the notebook:**
+Navigate to the Genetic_Algorithm_22.ipynb file in your Jupyter Notebook interface and open it to execute the genetic algorithm code.
+
+5.**Run the genetic algorithm:**
+Follow the procedure within the notebook to view results.
 
 6.**Shutdown Jupyter Notebook:**
 Once finished, you can shut down Jupyter Notebook by pressing Ctrl + C in the terminal where it's running and confirming the shutdown.
 
-7.**Deactivate virtual environment (if used):**
 
 
 
-# **Genetic Algorithm Documentation**
+
+# **Genetics Algorithm Documentation**
 
 
 ## 	Fitness Function
