@@ -38,7 +38,7 @@ Once finished, you can shut down Jupyter Notebook by pressing Ctrl + C in the te
 # **Genetic Algorithm Documentation**
 
 
-## 	**Fitness Function**
+## 	Fitness Function
 
 The fitness function evaluates how well a particular solution (chromosome) solves the problem. In this example, the fitness function is defined as:
 f(x)=∣2x2+5x−3∣f(x) = |2x^2 + 5x - 3|f(x)=∣2x2+5x−3∣
@@ -49,7 +49,7 @@ def calculate_fitness(x):
 	return abs(2 * x**2 + 5 * x - 3
 ```
 
-## **   Binary Encoding**
+##    Binary Encoding
 
 Binary encoding is used to represent potential solutions (chromosomes) as binary strings. Each chromosome consists of 11 bits:
 * The first bit represents the sign (0 for positive, 1 for negative).
@@ -69,7 +69,7 @@ def decode_chromosome(chromosome):
     return sign * (integer_part + residual_part)
 ```
 
-## ** Creating a Random Chromosome**
+##  Creating a Random Chromosome
 
 ```python
 # Function to create a random chromosome
@@ -77,7 +77,7 @@ def create_chromosome():
 	return [random.choice([0, 1]) for _ in range(11)]
 ```
 
-## **   Decoding a Chromosome**
+##    Decoding a Chromosome
 
 The binary string is decoded back to a floating-point number.
 
@@ -90,7 +90,7 @@ def decode_chromosome(chromosome):
 	return sign * (integer_part + residual_part)
 ```
 
-## **	Uniform Crossover**
+## 	Uniform Crossover
 Uniform crossover is a genetic operator used to combine the genetic information of two parents to generate a new offspring. Each gene (bit) of the offspring is chosen randomly from either parent.
 
 ```python
@@ -105,7 +105,7 @@ def crossover(parent1, parent2):
 	return child
 ```
 
-## **	Mutation**
+## 	Mutation
 Mutation is a genetic operator used to maintain genetic diversity. It randomly flips one bit in the chromosome.
 ```python
 # Function to perform mutation
@@ -114,6 +114,12 @@ def mutate(chromosome):
     chromosome[index] = 1 - chromosome[index]  # Flip the bit
     return chromosome
 ```
+##     Results
+After running the genetic algorithm, the best solution found will be printed along with its fitness value:
+'''
+Best solution found: x = 0.546875
+Fitness: 0.332520
+'''
 
 
 
