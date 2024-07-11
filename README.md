@@ -1,9 +1,9 @@
 # Introduction: 
 A genetic algorithm is a problem-solving technique inspired by the principles of natural evolution. It works by simulating the process of natural selection and genetic inheritance to find optimal or near-optimal solutions to complex problems. The algorithm starts with a population of potential solutions, each represented as a "chromosome" encoding specific traits. 
-This documentation explains how a genetic algorithm is used to find solutions to the equation 2x^2 + 5x - 3 = 0. The process mimics biological evolution to search for optimal solutions.
+This documentation explains how a genetic algorithm is used to find solutions to the equation 2x^x + 5x - 3 = 0. The process mimics biological evolution to search for optimal solutions.
 
 # Problem Definition: 
-1.	Equation to solve: 2x^2 + 5x - 3 = 0
+1.	Equation to solve: 2x^x + 5x - 3 = 0
 2.	Goal: Find values of x that make this equation true (or very close to true)
 
 # Installation (Jupyter)
@@ -41,7 +41,7 @@ Once finished, you can shut down Jupyter Notebook by pressing Ctrl + C in the te
 ## 	Fitness Function
 
 The fitness function evaluates how well a particular solution (chromosome) solves the problem. In this example, the fitness function is defined as:
-f(x)=∣2x2+5x−3∣f(x) = |2x^2 + 5x - 3|f(x)=∣2x2+5x−3∣
+f(x)=∣2x^x + 5x - 3 = 0∣ f(x) = |2x^2 + 5x - 3| f(x)=∣2x^x + 5x - 3 ∣
 The goal is to minimize this function.
 ```python
 # Function to calculate fitness (lower is better)
@@ -116,10 +116,10 @@ def mutate(chromosome):
 ```
 ##     Results
 After running the genetic algorithm, the best solution found will be printed along with its fitness value:
-'''
+```
 Best solution found: x = 0.546875
 Fitness: 0.332520
-'''
+```
 
 
 
