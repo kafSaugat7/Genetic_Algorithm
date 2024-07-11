@@ -8,7 +8,8 @@ This documentation explains how a genetic algorithm is used to find solutions to
 
 # Installation (Jupyter)
 To run this project locally,follow these steps:
-1.## **Clone the repository:**
+
+1. **Clone the repository:**
 
    ```sh
    git clone 
