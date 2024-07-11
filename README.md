@@ -34,19 +34,86 @@ Once finished, you can shut down Jupyter Notebook by pressing Ctrl + C in the te
 7.**Deactivate virtual environment (if used):**
 
 
-# Genetic Algorithm Documentation
- **Fitness Function**
-The fitness function evaluates how well a particular solution (chromosome) solves the problem:
-f(x) = |2x^2 + 5x - 3|
+
+# **Genetic Algorithm Documentation**
+
+
+## 	**Fitness Function**
+
+The fitness function evaluates how well a particular solution (chromosome) solves the problem. In this example, the fitness function is defined as:
+f(x)=∣2x2+5x−3∣f(x) = |2x^2 + 5x - 3|f(x)=∣2x2+5x−3∣
 The goal is to minimize this function.
 ```python
+# Function to calculate fitness (lower is better)
 def calculate_fitness(x):
-    return abs(2 * x**2 + 5 * x - 3)
+	return abs(2 * x**2 + 5 * x - 3
+```
 
-## sdmfmf
-# HEllo
-##hi
-###1222
+## **   Binary Encoding**
+
+Binary encoding is used to represent potential solutions (chromosomes) as binary strings. Each chromosome consists of 11 bits:
+* The first bit represents the sign (0 for positive, 1 for negative).
+* The next 4 bits represent the integer part of the number.
+* The last 6 bits represent the fractional part (residual part) of the number.
+
+```python
+# Function to create a random chromosome
+def create_chromosome():
+    return [random.choice([0, 1]) for _ in range(11)]
+
+# Function to decode a chromosome into a number
+def decode_chromosome(chromosome):
+    sign = -1 if chromosome[0] == 1 else 1
+    integer_part = int(''.join(map(str, chromosome[1:5])), 2)
+    residual_part = int(''.join(map(str, chromosome[5:])), 2) / 64
+    return sign * (integer_part + residual_part)
+```
+
+## ** Creating a Random Chromosome**
+
+```python
+# Function to create a random chromosome
+def create_chromosome():
+	return [random.choice([0, 1]) for _ in range(11)]
+```
+
+## **   Decoding a Chromosome**
+
+The binary string is decoded back to a floating-point number.
+
+```python
+# Function to decode a chromosome into a number
+def decode_chromosome(chromosome):
+	sign = -1 if chromosome[0] == 1 else 1
+	integer_part = int(''.join(map(str, chromosome[1:5])), 2)
+	residual_part = int(''.join(map(str, chromosome[5:])), 2) / 64
+	return sign * (integer_part + residual_part)
+```
+
+## **	Uniform Crossover**
+Uniform crossover is a genetic operator used to combine the genetic information of two parents to generate a new offspring. Each gene (bit) of the offspring is chosen randomly from either parent.
+
+```python
+# Function to perform crossover
+def crossover(parent1, parent2):
+	child = []
+	for i in range(len(parent1)):
+    	if random.random() < 0.5:
+        	child.append(parent1[i])
+    	else:
+        	child.append(parent2[i])
+	return child
+```
+
+## **	Mutation**
+Mutation is a genetic operator used to maintain genetic diversity. It randomly flips one bit in the chromosome.
+```python
+# Function to perform mutation
+def mutate(chromosome):
+    index = random.randint(0, len(chromosome) - 1)
+    chromosome[index] = 1 - chromosome[index]  # Flip the bit
+    return chromosome
+```
 
 
 
