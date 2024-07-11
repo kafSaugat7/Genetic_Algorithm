@@ -12,5 +12,43 @@ To run this project locally,follow these steps:
 1. **Clone the repository:**
 
    ```sh
-   git clone 
+   git clone
+
+2. **Create a virtual environment (optional but recommended):**
+ Creating a virtual environment is recommended to keep project dependencies isolated.
+'''sh
+python -m
+
+3. **Install Jupyter Notebook and dependencies:**
+ Install Jupyter Notebook and other dependencies using pip.
+
+4.**Start Jupyter Notebook:**
+Launch Jupyter Notebook to run the genetic algorithm notebook.
+
+5.**Open the notebook:**
+Navigate to the genetic_algorithm.ipynb file in your Jupyter Notebook interface and open it to execute the genetic algorithm code.
+
+6.**Shutdown Jupyter Notebook:**
+Once finished, you can shut down Jupyter Notebook by pressing Ctrl + C in the terminal where it's running and confirming the shutdown.
+
+7.**Deactivate virtual environment (if used):**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
 
