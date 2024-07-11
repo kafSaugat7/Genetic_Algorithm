@@ -34,6 +34,34 @@ Once finished, you can shut down Jupyter Notebook by pressing Ctrl + C in the te
 7.**Deactivate virtual environment (if used):**
 
 
+# Genetic Algorithm Documentation
+## Fitness Function
+
+The fitness function evaluates how well a particular solution (chromosome) solves the problem:
+f(x) = |2x^2 + 5x - 3|
+The goal is to minimize this function.
+```python
+def calculate_fitness(x):
+    return abs(2 * x**2 + 5 * x - 3)
+
+## Binary Encoding
+Binary encoding is used to represent potential solutions (chromosomes) as binary strings. Each chromosome consists of 11 bits:
+* The first bit represents the sign (0 for positive, 1 for negative).
+* The next 4 bits represent the integer part of the number.
+* The last 6 bits represent the fractional part (residual part) of the number.
+```python
+> Function to create a random chromosome
+def create_chromosome():
+    return [random.choice([0, 1]) for _ in range(11)]
+
+> Function to decode a chromosome into a number
+def decode_chromosome(chromosome):
+    sign = -1 if chromosome[0] == 1 else 1
+    integer_part = int(''.join(map(str, chromosome[1:5])), 2)
+    residual_part = int(''.join(map(str, chromosome[5:])), 2) / 64
+    return sign * (integer_part + residual_part)
+
+
 
 
 
